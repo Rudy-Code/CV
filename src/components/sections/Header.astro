@@ -8,25 +8,25 @@ import { Icon } from 'astro-icon/components'
 <header class="bg-secondary text-white">
 	<Container class="flex items-center justify-between" padding="small">
 		<div class="flex flex-col gap-3">
-			<h1 class="text-6xl font-bold">{contactInfo.name}</h1>
+			<h1 class="text-5xl font-bold">{contactInfo.name}</h1>
 			<p class="text-lg text-zinc-300">{contactInfo.title}</p>
 		</div>
-		<div class="flex flex-col gap-3.5">
+		<div class="flex flex-col gap-2">
 			<div class="flex items-center">
-				<Icon name="lucide:map-pin" class="mr-3 size-5" />
+				<Icon name="lucide:map-pin" class="mr-3 size-4" />
 				<p>{contactInfo.city}</p>
 			</div>
 			<div class="flex items-center">
-				<Icon name="lucide:mail" class="mr-3 size-5" />
+				<Icon name="lucide:mail" class="mr-3 size-4" />
 				<a href={`mailto:${contactInfo.email}`}>{contactInfo.email}</a>
 			</div>
 			<div class="flex items-center">
-				<Icon name="lucide:phone" class="mr-3 size-5" />
+				<Icon name="lucide:phone" class="mr-3 size-4" />
 
 				<a href={`tel:${contactInfo.phone}`}>{contactInfo.phone}</a>
 			</div>
 			<div class="flex items-center">
-				<Icon name="lucide:link" class="mr-3 size-5" />
+				<Icon name="lucide:link" class="mr-3 size-4" />
 				<a href={`https://${contactInfo.portfolio}`} target="_blank" rel="noopener noreferrer">
 					{contactInfo.portfolio}
 				</a>

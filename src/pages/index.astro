@@ -4,16 +4,17 @@ import Header from '@sections/Header.astro'
 import Main from '@sections/Main.astro'
 import Side from '@sections/Side.astro'
 import Footer from '@sections/Footer.astro'
+import Container from '@ui/Container.astro'
 
 const title = 'CV - Marek Gondek'
 ---
 
 <Layout title={title}>
 	<Header />
-	<div class="">
+	<Container class="flex" padding="small">
 		<Main />
 		<Side />
-	</div>
+	</Container>
 
 	<Footer />
 </Layout>

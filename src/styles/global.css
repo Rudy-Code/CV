@@ -5,6 +5,11 @@
 	--color-primary: #fff;
 	--color-secondary: #0f1f3d;
 
+	--color-text: #1a1a2e;
+	--color-text-secondary: #204ea1;
+	--color-text-muted: #7a88a8;
+
+	--color-border: #c8cad4;
 }
 
 @media print {
