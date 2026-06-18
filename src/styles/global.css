@@ -1,1 +1,18 @@
-@import "tailwindcss";
+@import 'tailwindcss';
+
+@media print {
+	@page {
+		size: A4;
+		margin: 0;
+	}
+
+	* {
+		-webkit-print-color-adjust: exact;
+		print-color-adjust: exact;
+	}
+
+	.cv-root {
+		width: 210mm;
+		min-height: 297mm;
+	}
+}
