@@ -26,12 +26,6 @@ export interface ProjectItem {
 	bullets: string[]
 }
 
-export interface EducationItem {
-	degree: string
-	school: string
-	date: string
-}
-
 export interface TechGroup {
 	label: string
 	tags: string[]
@@ -92,13 +86,13 @@ export const projects: ProjectItem[] = [
 			{ label: 'shinyvisions.pl', url: 'https://shinyvisions.pl' },
 		],
 		bullets: [
-			'Panel administracyjny z auto-optymalizacją zdjęć — klient samodzielnie dodaje realizacje',
+			'Panel administracyjny z auto-optymalizacją zdjęć - klient samodzielnie dodaje realizacje',
 			'Interaktywny suwak przed/po prezentujący efekty pracy; animowane marquee z realizacjami',
 			'Formularz kontaktowy w dwóch trybach (ogólny / szczegółowe zapytanie projektowe)',
 		],
 	},
 	{
-		name: 'RudyCode.pl — strona firmowa',
+		name: 'RudyCode.pl - strona firmowa',
 		stack: ['Astro', 'TypeScript', 'Tailwind CSS', 'Vite', 'Umami'],
 		links: [{ label: 'rudycode.pl', url: 'https://rudycode.pl' }],
 		bullets: [
@@ -117,7 +111,7 @@ export const projects: ProjectItem[] = [
 export const technologies: TechGroup[] = [
 	{
 		label: 'Frontend',
-		tags: ['HTML5', 'CSS3', 'SCSS', 'JavaScript ES6+', 'TypeScript', 'Tailwind CSS', 'Bootstrap', 'Astro'],
+		tags: ['HTML5', 'CSS3', 'SCSS', 'JavaScript ES6+', 'TypeScript', 'Tailwind CSS', 'Bootstrap', 'Astro', 'React'],
 		variant: 'default',
 	},
 	{
@@ -125,9 +119,15 @@ export const technologies: TechGroup[] = [
 		tags: ['Git', 'Vite', 'npm', 'Figma', 'Jira', 'Photoshop'],
 		variant: 'default',
 	},
-	{
-		label: 'Do odświeżenia',
-		tags: ['React'],
-		variant: 'learning',
-	},
+	// {
+	// 	label: 'Do odświeżenia',
+	// 	tags: [''],
+	// 	variant: 'learning',
+	// },
+]
+
+export const interests: string[] = [
+	'Piłka ręczna - bramkarz i sędzia ligowy',
+	'Bieganie - przygotowania do trasy 48 km',
+	'STAR WARS',
 ]

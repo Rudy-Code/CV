@@ -1,6 +1,7 @@
 ---
 import { projects } from '@data/index'
 import SectionHeader from '@ui/SectionHeader.astro'
+import { Icon } from 'astro-icon/components'
 ---
 
 <section class="flex flex-col gap-2" id="projects">
@@ -11,7 +12,7 @@ import SectionHeader from '@ui/SectionHeader.astro'
 			projects.map(item => (
 				<div class="">
 					<div class="flex items-center justify-between">
-						<h3 class="text-text text-lg font-semibold">{item.name}</h3>
+						<h3 class="text-text  font-semibold">{item.name}</h3>
 						<div class="space-x-2">
 							{item.links.map(link => (
 								<a
@@ -25,8 +26,13 @@ import SectionHeader from '@ui/SectionHeader.astro'
 							))}
 						</div>
 					</div>
-					<div class="mt-0.5">
-						<p class="text-text-secondary text-sm">{item.stack.join(', ')}</p>
+					<div class="mt-0.5 flex flex-wrap">
+						{item.stack.map((tech, index) => (
+							<div class="text-text-secondary flex items-center">
+								<span class="text-sm">{tech}</span>
+								{index !== item.stack.length - 1 && <Icon name="lucide:dot" class="size-6 px-1" />}
+							</div>
+						))}
 					</div>
 					<ul class="mt-2 list-inside list-disc pl-2">
 						{item.bullets.map(bullet => (

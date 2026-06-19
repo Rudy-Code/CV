@@ -4,30 +4,34 @@ import { Icon } from 'astro-icon/components'
 ---
 
 <header class="bg-secondary text-white">
-	<div class="flex items-center justify-between py-4 pr-10 pl-6">
+	<div class="flex items-center justify-between py-10 pr-10 pl-8">
 		<div class="flex flex-col gap-1">
 			<h1 class="text-4xl font-bold">{contactInfo.name}</h1>
 			<p class="text-lg text-blue-300/80">{contactInfo.title}</p>
 		</div>
-		<div class="flex flex-col gap-2">
-			<div class="flex items-center text-sm">
-				<Icon name="lucide:map-pin" class="mr-3 size-4" />
-				<p>{contactInfo.city}</p>
+		<div class="flex gap-10">
+			<div class="flex flex-col gap-2">
+				<div class="flex items-center text-sm">
+					<Icon name="lucide:map-pin" class="mr-3 size-4" />
+					<p>{contactInfo.city}</p>
+				</div>
+				<div class="flex items-center text-sm">
+					<Icon name="lucide:mail" class="mr-3 size-4" />
+					<a href={`mailto:${contactInfo.email}`}>{contactInfo.email}</a>
+				</div>
 			</div>
-			<div class="flex items-center text-sm">
-				<Icon name="lucide:mail" class="mr-3 size-4" />
-				<a href={`mailto:${contactInfo.email}`}>{contactInfo.email}</a>
-			</div>
-			<div class="flex items-center text-sm">
-				<Icon name="lucide:phone" class="mr-3 size-4" />
+			<div class="flex flex-col gap-2">
+				<div class="flex items-center text-sm">
+					<Icon name="lucide:phone" class="mr-3 size-4" />
 
-				<a href={`tel:${contactInfo.phone}`}>{contactInfo.phone}</a>
-			</div>
-			<div class="flex items-center text-sm">
-				<Icon name="lucide:link" class="mr-3 size-4" />
-				<a href={`https://${contactInfo.portfolio}`} target="_blank" rel="noopener noreferrer">
-					{contactInfo.portfolio}
-				</a>
+					<a href={`tel:${contactInfo.phone}`}>{contactInfo.phone}</a>
+				</div>
+				<div class="flex items-center text-sm">
+					<Icon name="lucide:link" class="mr-3 size-4" />
+					<a href={`https://${contactInfo.portfolio}`} target="_blank" rel="noopener noreferrer">
+						{contactInfo.portfolio}
+					</a>
+				</div>
 			</div>
 		</div>
 	</div>

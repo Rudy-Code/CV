@@ -1,0 +1,14 @@
+---
+import { interests } from '@data/index'
+import SectionHeader from '@ui/SectionHeader.astro'
+---
+
+<section id="interests">
+	<SectionHeader text="Zainteresowania" variant="side" />
+
+	<div class="mt-3">
+		<ul class="list-inside list-disc pl-2 space-y-1">
+			{interests.map(interest => <li class="text-text-muted text-sm">{interest}</li>)}
+		</ul>
+	</div>
+</section>
