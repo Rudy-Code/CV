@@ -14,13 +14,18 @@ import SectionHeader from '@ui/SectionHeader.astro'
 						<h3 class="text-text text-lg font-semibold">{item.name}</h3>
 						<div class="space-x-2">
 							{item.links.map(link => (
-								<a href={link.url} target="_blank" rel="noopener noreferrer" class="text-text-secondary text-sm transition-colors border-b border-transparent hover:border-text-secondary">
+								<a
+									href={link.url}
+									target="_blank"
+									rel="noopener noreferrer"
+									class="text-text-secondary hover:border-text-secondary border-b border-transparent text-sm transition-colors"
+								>
 									{link.label}
 								</a>
 							))}
 						</div>
 					</div>
-					<div class="mt-2">
+					<div class="mt-0.5">
 						<p class="text-text-secondary text-sm">{item.stack.join(', ')}</p>
 					</div>
 					<ul class="mt-2 list-inside list-disc pl-2">

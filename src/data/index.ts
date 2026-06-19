@@ -26,6 +26,18 @@ export interface ProjectItem {
 	bullets: string[]
 }
 
+export interface EducationItem {
+	degree: string
+	school: string
+	date: string
+}
+
+export interface TechGroup {
+	label: string
+	tags: string[]
+	variant?: 'default' | 'learning'
+}
+
 // ==== DATA  ====
 
 export const contactInfo: contactInfo = {
@@ -99,5 +111,23 @@ export const projects: ProjectItem[] = [
 		stack: ['SB Detailing', 'Arte Meubles', 'MOSiR Bochnia', 'MLE'],
 		links: [{ label: 'rudycode.pl/realizacje', url: 'https://rudycode.pl/realizacje/' }],
 		bullets: ['Strony dla klientów z branż detailingu, meblarstwa, sportu i esportu'],
+	},
+]
+
+export const technologies: TechGroup[] = [
+	{
+		label: 'Frontend',
+		tags: ['HTML5', 'CSS3', 'SCSS', 'JavaScript ES6+', 'TypeScript', 'Tailwind CSS', 'Bootstrap', 'Astro'],
+		variant: 'default',
+	},
+	{
+		label: 'Narzędzia',
+		tags: ['Git', 'Vite', 'npm', 'Figma', 'Jira', 'Photoshop'],
+		variant: 'default',
+	},
+	{
+		label: 'Do odświeżenia',
+		tags: ['React'],
+		variant: 'learning',
 	},
 ]
