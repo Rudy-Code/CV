@@ -23,7 +23,7 @@
 		print-color-adjust: exact;
 	}
 
-	.cv-root {
+	body {
 		width: 210mm;
 		min-height: 297mm;
 	}

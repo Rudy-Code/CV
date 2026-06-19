@@ -16,6 +16,16 @@ export interface experienceItem {
 	bullets: string[]
 }
 
+export interface ProjectItem {
+	name: string
+	stack: string[]
+	links: {
+		label: string
+		url: string
+	}[]
+	bullets: string[]
+}
+
 // ==== DATA  ====
 
 export const contactInfo: contactInfo = {
@@ -58,5 +68,36 @@ export const experience: experienceItem[] = [
 			'Optymalizacja wydajności: czyszczenie klatek animacji, podział danych, wskaźnik ładowania',
 			'Samodzielne znajdowanie rozwiązań nieudokumentowanych w sieci - praca bezpośrednio z dokumentacją',
 		],
+	},
+]
+
+export const projects: ProjectItem[] = [
+	{
+		name: 'ShinyVisions.pl + Ofoliowany.pl',
+		stack: ['Astro', 'TypeScript', 'Tailwind CSS', 'Vite'],
+		links: [
+			{ label: 'ofoliowany.pl', url: 'https://ofoliowany.pl' },
+			{ label: 'shinyvisions.pl', url: 'https://shinyvisions.pl' },
+		],
+		bullets: [
+			'Panel administracyjny z auto-optymalizacją zdjęć — klient samodzielnie dodaje realizacje',
+			'Interaktywny suwak przed/po prezentujący efekty pracy; animowane marquee z realizacjami',
+			'Formularz kontaktowy w dwóch trybach (ogólny / szczegółowe zapytanie projektowe)',
+		],
+	},
+	{
+		name: 'RudyCode.pl — strona firmowa',
+		stack: ['Astro', 'TypeScript', 'Tailwind CSS', 'Vite', 'Umami'],
+		links: [{ label: 'rudycode.pl', url: 'https://rudycode.pl' }],
+		bullets: [
+			'Portfolio z blogiem, podstroną oferry, realizacji, darmowymi narzędziami i sekcją kontaktową',
+			'Analityka bez cookies (Umami); 100/100 PageSpeed',
+		],
+	},
+	{
+		name: 'Pozostałe realizacje',
+		stack: ['SB Detailing', 'Arte Meubles', 'MOSiR Bochnia', 'MLE'],
+		links: [{ label: 'rudycode.pl/realizacje', url: 'https://rudycode.pl/realizacje/' }],
+		bullets: ['Strony dla klientów z branż detailingu, meblarstwa, sportu i esportu'],
 	},
 ]

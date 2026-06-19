@@ -1,0 +1,35 @@
+---
+import { projects } from '@data/index'
+import SectionHeader from '@ui/SectionHeader.astro'
+---
+
+<div class="flex flex-col gap-2">
+	<SectionHeader text="Projekty" />
+
+	<div class="mt-2 flex flex-col gap-4">
+		{
+			projects.map(item => (
+				<div class="">
+					<div class="flex items-center justify-between">
+						<h3 class="text-text text-lg font-semibold">{item.name}</h3>
+						<div class="space-x-2">
+							{item.links.map(link => (
+								<a href={link.url} target="_blank" rel="noopener noreferrer" class="text-text-secondary text-sm transition-colors border-b border-transparent hover:border-text-secondary">
+									{link.label}
+								</a>
+							))}
+						</div>
+					</div>
+					<div class="mt-2">
+						<p class="text-text-secondary text-sm">{item.stack.join(', ')}</p>
+					</div>
+					<ul class="mt-2 list-inside list-disc pl-2">
+						{item.bullets.map(bullet => (
+							<li class="text-text/80 text-sm">{bullet}</li>
+						))}
+					</ul>
+				</div>
+			))
+		}
+	</div>
+</div>
