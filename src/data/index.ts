@@ -52,7 +52,7 @@ export const experience: experienceItem[] = [
 	{
 		role: 'Frontend Developer',
 		company: 'MLE - Młodzieżowa Liga Esportowa',
-		date: 'marzec 2024 - grudzień 2025 | powrót grudzień 2026',
+		date: 'marzec 2024 - grudzień 2025',
 		bullets: [
 			'Pełna przebudowa frontendu: migracja do TypeScript i Tailwind CSS, responsywność, optymalizacja wydajności',
 			'Implementacja nowych funkcjonalności z użyciem Reacta; integracja frontendu z backendem',

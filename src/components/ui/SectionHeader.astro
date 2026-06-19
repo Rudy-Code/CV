@@ -1,7 +1,17 @@
 ---
-const { text } = Astro.props
+interface Props {
+	text: string
+	variant?: 'main' | 'side'
+}
+
+const { text, variant = 'main' } = Astro.props
+
+const variants = {
+	main: 'text-text border-border',
+	side: 'text-blue-300/80 border-blue-200/30',
+}
 ---
 
-<h2 class="text-md text-text border-border w-full border-b py-0.5 font-semibold tracking-wider uppercase">
+<h2 class:list={[variants[variant], 'w-full border-b py-1 text-sm font-semibold tracking-widest uppercase']}>
 	{text}
 </h2>
