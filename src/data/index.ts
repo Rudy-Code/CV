@@ -7,6 +7,7 @@ export interface contactInfo {
 	phone: string
 	city: string
 	portfolio: string
+	linkedin: string
 }
 
 export interface experienceItem {
@@ -38,31 +39,33 @@ export const contactInfo: contactInfo = {
 	name: 'Marek Gondek',
 	title: 'Frontend Developer',
 	email: 'marek@rudycode.pl',
-	phone: '+48665260251',
+	phone: '+48 665 260 251',
 	city: 'Bochnia',
 	portfolio: 'rudycode.pl',
+	linkedin: 'linkedin.com/in/marek-gondek',
 }
 
 export const experience: experienceItem[] = [
 	{
 		role: 'Frontend Developer | Właściciel',
-		company: 'RudyCode.pl - działalność gospodarcza',
+		company: 'RudyCode.pl',
 		date: 'marzec 2024 - obecnie',
 		bullets: [
 			'Tworzę strony internetowe dla klientów z branży usługowej - od projektu w Figmie po wdrożenie',
-			'Każda dostarczona strona osiąga wynik 100/100 w Google PageSpeed',
-			'Przekładam potrzeby klientów na konkretne rozwiązania techniczne - komunikacja bezpośrednia, bez pośredników',
+			'Przekładam potrzeby klientów na konkretne rozwiązania techniczne - komunikacja bezpośrednia',
+			'Tworzę instrukcje obsługi dla klientów',
 			'Rozwijam własną stronę firmową (Astro, TypeScript, Tailwind CSS) i tworzę content na media społecznościowe (Figma, Photoshop)',
 		],
 	},
 	{
 		role: 'Frontend Developer',
 		company: 'MLE - Młodzieżowa Liga Esportowa',
-		date: 'marzec 2024 - grudzień 2025',
+		date: 'marzec 2024 - kwiecień 2025',
 		bullets: [
 			'Pełna przebudowa frontendu: migracja do TypeScript i Tailwind CSS, responsywność, optymalizacja wydajności',
-			'Implementacja nowych funkcjonalności z użyciem Reacta; integracja frontendu z backendem',
-			'Praca w zespole, regularne code review od starszego programisty i wdrażanie uwag',
+			'Implementacja nowych funkcjonalności z użyciem React (projekt SPA)',
+			'Integracja frontendu z backendem (REST API)',
+			'Praca w zespole z zachowaniem Clean Code, regularne code review od starszego programisty i wdrażanie uwag',
 		],
 	},
 	{
@@ -96,7 +99,7 @@ export const projects: ProjectItem[] = [
 		stack: ['Astro', 'TypeScript', 'Tailwind CSS', 'Vite', 'Umami'],
 		links: [{ label: 'rudycode.pl', url: 'https://rudycode.pl' }],
 		bullets: [
-			'Portfolio z blogiem, podstroną oferry, realizacji, darmowymi narzędziami i sekcją kontaktową',
+			'Portfolio z blogiem, podstroną oferty, realizacji, darmowymi narzędziami i sekcją kontaktową',
 			'Analityka bez cookies (Umami); 100/100 PageSpeed',
 		],
 	},
@@ -119,15 +122,11 @@ export const technologies: TechGroup[] = [
 		tags: ['Git', 'Vite', 'npm', 'Figma', 'Jira', 'Photoshop'],
 		variant: 'default',
 	},
-	// {
-	// 	label: 'Do odświeżenia',
-	// 	tags: [''],
-	// 	variant: 'learning',
-	// },
 ]
 
 export const interests: string[] = [
 	'Piłka ręczna - bramkarz i sędzia ligowy',
 	'Bieganie - przygotowania do trasy 48 km',
 	'STAR WARS',
+	'Punktualne pociągi na trasie Bochnia - Kraków',
 ]
